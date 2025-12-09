@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification - Pull de Noël</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="show-page">
+
+<div id="login-page" class="page active">
+    <div class="container">
+        <div class="header">
+            <h1>🎅 Authentification</h1>
+            <p>Connexion ou Inscription</p>
+        </div>
+
+        <div id="alert-login" class="alert"></div>
+
+        <!-- TOGGLE BUTTONS -->
+        <div class="auth-toggle">
+            <button class="btn btn-primary" id="toggle-login-btn">Connexion</button>
+            <button class="btn btn-outline" id="toggle-register-btn">Inscription</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="login-form" class="auth-form hidden">
+            <div class="form-group">
+                <label for="login-email">Email Ypareo</label>
+                <input type="email" id="login-email" placeholder="jean.dupont@ypareo.fr" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Mot de passe</label>
+                <input type="password" id="login-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="register-form" class="auth-form">
+            <div class="form-group">
+                <label for="register-name">Nom complet</label>
+                <input type="text" id="register-name" placeholder="Jean Dupont" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email Ypareo</label>
+                <input type="email" id="register-email" placeholder="jean.dupont@ypareo.fr" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Mot de passe</label>
+                <input type="password" id="register-password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </form>
+
+        <div class="toggle-auth">
+            <span id="toggle-text">Déjà inscrit ?</span>
+            <button type="button" id="toggle-link"></button>
+        </div>
+    </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
