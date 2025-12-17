@@ -7,39 +7,35 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vote.css">
 </head>
-<body class="show-page">
 
+<body class="show-page">
 <div id="vote-page" class="page active">
     <div class="container-mobile">
         <div class="header">
             <h1>⭐ Vote</h1>
-            <p>Swipe droite pour voter 💚 | Gauche pour passer ❌</p>
+            <p>Swipe droite pour aimer 💚, gauche pour passer ❌</p>
         </div>
 
         <div id="alert-vote" class="alert"></div>
 
-        <!-- PROGRESS -->
         <div class="progress">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
 
-        <!-- SWIPE CONTAINER -->
         <div class="swipe-container" id="swipe-container">
             <div class="vote-indicator" id="vote-indicator"></div>
         </div>
 
-        <!-- SWIPE BUTTONS -->
         <div class="swipe-actions">
             <button class="swipe-btn swipe-btn-left" id="swipe-left-btn" title="Passer">❌</button>
             <button class="swipe-btn swipe-btn-right" id="swipe-right-btn" title="Voter">❤️</button>
         </div>
 
-        <!-- EMPTY STATE -->
         <div id="empty-state" class="empty-state" style="display: none;">
             <div class="empty-state-icon">🎉</div>
             <h2>Merci d'avoir voté !</h2>
             <p>Tu as voté pour tous les participants.</p>
-            <button class="btn btn-primary" id="back-vote-btn">← Retour</button>
+            <button class="btn btn-primary" id="back-vote-btn">← Retour au profil</button>
         </div>
 
         <button class="btn btn-outline logout-btn" id="logout-vote-btn">Déconnexion</button>

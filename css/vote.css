@@ -1,0 +1,172 @@
+/* ===== CONTAINER SWIPE ===== */
+.swipe-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 430px;
+    margin: 10px auto 18px;
+    perspective: 1000px;
+}
+
+/* ===== CARTE ===== */
+.card {
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    background: #020617;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    cursor: grab;
+    touch-action: none;
+    transition: transform 0.12s linear, opacity 0.12s linear;
+}
+
+.card.dragging {
+    cursor: grabbing;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Infos en bas de la carte */
+.card-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 16px 14px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent 70%);
+    color: #f9fafb;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-votes {
+    font-size: 13px;
+    color: #fbb6ce;
+}
+
+/* ===== INDICATEUR LIKE / DISLIKE ===== */
+.vote-indicator {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+}
+
+.vote-indicator.show {
+    opacity: 1;
+}
+
+.vote-indicator.like {
+    color: #f9739b;
+}
+
+.vote-indicator.dislike {
+    color: #f87171;
+}
+
+/* ===== BOUTONS SWIPE ===== */
+.swipe-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.swipe-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 999px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: #020617;
+    color: #f9fafb;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+/* Gauche = dislike */
+.swipe-btn-left {
+    background: radial-gradient(circle at 30% 20%, #fee2e2 0, #b91c1c 45%, #7f1d1d 100%);
+}
+
+/* Droite = like */
+.swipe-btn-right {
+    background: radial-gradient(circle at 30% 20%, #ffe4ef 0, #fb7185 45%, #9d174d 100%);
+}
+
+.swipe-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 22px 40px rgba(15, 23, 42, 0.95);
+}
+
+.swipe-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* ===== PROGRESSION ===== */
+.progress {
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(30, 64, 175, 0.4);
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #fb7185, #f9739b, #f9a8d4);
+    transition: width 0.3s ease;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+    text-align: center;
+    padding: 26px 14px 10px;
+}
+
+.empty-state-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.empty-state h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: #cbd5f5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .swipe-container {
+        height: 380px;
+        max-width: 320px;
+    }
+    .swipe-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+}

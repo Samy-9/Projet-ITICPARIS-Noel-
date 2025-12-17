@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Pull de Noël</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="show-page">
-
 <div id="profile-page" class="page active">
     <div class="container-mobile">
         <div class="header">
@@ -17,13 +16,11 @@
 
         <div id="alert-profile" class="alert"></div>
 
-        <!-- USER INFO -->
         <div class="profile-info">
             <p><strong id="profile-username">Utilisateur</strong></p>
             <p id="profile-email">email@ypareo.fr</p>
         </div>
 
-        <!-- IMAGE PREVIEW -->
         <div class="image-preview" id="preview">
             <div class="image-preview-empty">
                 <div class="image-preview-icon">📷</div>
@@ -31,7 +28,6 @@
             </div>
         </div>
 
-        <!-- DROPZONE -->
         <div class="dropzone" id="dropzone">
             <div class="dropzone-icon">⬇️</div>
             <div class="dropzone-text">
@@ -40,10 +36,8 @@
             </div>
         </div>
 
-        <!-- HIDDEN FILE INPUT -->
         <input type="file" id="file-input" accept="image/*" hidden>
 
-        <!-- ACTION BUTTONS -->
         <div class="button-group">
             <button class="btn btn-secondary" id="clear-image-btn">Supprimer</button>
             <button class="btn btn-primary" id="next-vote-btn">Voter →</button>
@@ -53,8 +47,8 @@
     </div>
 </div>
 
-<script src="storage.js"></script>
-<script src="utils.js"></script>
-<script src="profile.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/profile.js"></script>
 </body>
 </html>
