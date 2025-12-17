@@ -46,3 +46,15 @@ les votes effectués,
 l’utilisateur actuellement connecté.
 
 Jeu de données de démo (utilisateurs test avec photos de pulls).
+
+## Contributeurs
+
+Ce projet a été réalisé par :
+
+Boumrah Samy 
+Fourneau Antoine
+Kenny
+Louis
+Soren Martinez
+
+Merci à tous ceux qui ont participé à ce projet !
