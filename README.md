@@ -1,10 +1,8 @@
-Voici un exemple de README clair et adapté à ton projet. Tu pourras l’ajuster avec ton nom, ta classe, etc.
-
-Concours de Pull de Noël – Application type Tinder
+## Concours de Pull de Noël – Application type Tinder
 Ce projet est une application web permettant d’organiser un concours de pulls moches de Noël avec une interface de vote inspirée de Tinder (swipe droite pour liker, swipe gauche pour disliker).
 L’objectif est de proposer une expérience simple : chaque utilisateur s’inscrit, dépose la photo de son pull, puis vote pour les pulls des autres participants.
 
-1. Fonctionnalités principales
+## Fonctionnalités principales
 Inscription / Connexion
 
 Création de compte avec nom, email Yparéo et mot de passe.
