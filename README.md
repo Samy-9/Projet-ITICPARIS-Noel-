@@ -53,8 +53,8 @@ Ce projet a été réalisé par :
 
 Boumrah Samy 
 Fourneau Antoine
-Kenny
-Louis
-Soren Martinez
+Sintina Kenny
+Delcloy Louis 
+Martinez Soren
 
 Merci à tous ceux qui ont participé à ce projet !
