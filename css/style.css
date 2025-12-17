@@ -1,7 +1,6 @@
-/* ========== BASE & COULEURS ========== */
 :root {
-    --bg-dark: #0f172a;          /* fond bleu nuit */
-    --accent: #ff4b92;           /* rose dégradé */
+    --bg-dark: #0f172a;          
+    --accent: #ff4b92;          
     --accent-light: #ff7fb0;
     --text-light: #f9fafb;
     --text-muted: #cbd5f5;
@@ -24,14 +23,12 @@ html, body {
     color: var(--text-light);
 }
 
-/* Conteneur pleine page */
 body.show-page {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* ========== PAGES ========== */
 .page {
     width: 100%;
     max-width: 900px;
@@ -45,7 +42,6 @@ body.show-page {
     padding: 24px 28px 32px;
 }
 
-/* Variante mobile (profile/vote) */
 .container-mobile {
     background: rgba(15, 23, 42, 0.95);
     border-radius: var(--radius-lg);
@@ -56,7 +52,6 @@ body.show-page {
     margin: 0 auto;
 }
 
-/* ========== HEADER ========== */
 .header {
     display: flex;
     flex-direction: column;
@@ -88,7 +83,6 @@ body.show-page {
     color: var(--text-muted);
 }
 
-/* ========== FORMULAIRES ========== */
 .auth-toggle {
     display: flex;
     gap: 10px;
@@ -139,7 +133,6 @@ input:focus {
     box-shadow: 0 0 0 1px rgba(248, 113, 150, 0.7);
 }
 
-/* ========== BOUTONS ========== */
 .btn {
     border-radius: 999px;
     padding: 11px 18px;
@@ -181,7 +174,6 @@ input:focus {
     margin-top: 14px;
 }
 
-/* ========== ALERTES ========== */
 .alert {
     display: none;
     margin-bottom: 16px;
@@ -206,7 +198,6 @@ input:focus {
     color: #bbf7d0;
 }
 
-/* ========== PROFIL ========== */
 .profile-info {
     background: rgba(15, 23, 42, 0.8);
     border-radius: 14px;
@@ -220,7 +211,6 @@ input:focus {
     color: var(--text-muted);
 }
 
-/* Preview image */
 .image-preview {
     width: 220px;
     height: 220px;
@@ -250,7 +240,6 @@ input:focus {
     margin-bottom: 4px;
 }
 
-/* Dropzone */
 .dropzone {
     border-radius: 18px;
     border: 2px dashed rgba(248, 113, 150, 0.7);
@@ -278,14 +267,12 @@ input:focus {
     color: var(--text-muted);
 }
 
-/* Groupe de boutons profil */
 .button-group {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
-/* ========== TOGGLE TEXTE BAS ========== */
 .toggle-auth {
     margin-top: 10px;
     font-size: 13px;
@@ -301,7 +288,6 @@ input:focus {
     font-weight: 600;
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
     .container {
         padding: 18px 18px 24px;

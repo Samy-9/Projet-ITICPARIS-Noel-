@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         preview.innerHTML = `<img src="${user.photo}" alt="Preview">`;
     }
 
-    // ===== DRAG & DROP + INPUT =====
     dropzone.addEventListener('click', () => fileInput.click());
 
     dropzone.addEventListener('dragover', (e) => {
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (file) handleFile(file);
     });
 
-    // ===== TRAITEMENT IMAGE =====
     function handleFile(file) {
         if (file.size > 5 * 1024 * 1024) {
             Utils.showAlert('Le fichier dépasse 5 Mo.', 'error', 'alert-profile');
@@ -69,12 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const processedImage = canvas.toDataURL('image/jpeg', 0.8);
                 preview.innerHTML = `<img src="${processedImage}" alt="Preview">`;
 
-                // Maj currentUser
                 const current = Utils.getCurrentUser();
                 current.photo = processedImage;
                 Utils.setCurrentUser(current);
 
-                // Maj students
                 let students = StorageManager.get('students') || [];
                 const index = students.findIndex(s => s.email === current.email);
 
@@ -97,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(file);
     }
 
-    // ===== BOUTONS =====
     document.getElementById('clear-image-btn').addEventListener('click', () => {
         const current = Utils.getCurrentUser();
         current.photo = null;

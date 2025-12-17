@@ -1,7 +1,5 @@
-// ===== STORAGE MODULE =====
 const StorageManager = {
     init() {
-        // Créer les étudiants de démo une seule fois
         if (!this.get('students')) {
             const demoStudents = [
                 {
@@ -49,7 +47,6 @@ const StorageManager = {
             this.set('students', demoStudents);
         }
 
-        // Structure vide pour les votes
         if (!this.get('votes')) {
             this.set('votes', {});
         }
@@ -65,13 +62,11 @@ const StorageManager = {
     },
 
     addVote(voterId, targetId, type) {
-        // Mettre à jour la matrice de votes
         const votes = this.get('votes') || {};
         if (!votes[voterId]) votes[voterId] = {};
         votes[voterId][targetId] = type;
         this.set('votes', votes);
 
-        // Mettre à jour les compteurs du student
         const students = this.get('students') || [];
         const student = students.find(s => s.id === targetId);
         if (student) {

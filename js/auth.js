@@ -1,9 +1,7 @@
-// ===== AUTH MODULE =====
 const Auth = {
     register(name, email, password) {
         const students = StorageManager.get('students') || [];
 
-        // email déjà utilisé
         if (students.some(s => s.email === email)) {
             Utils.showAlert('Cet email est déjà utilisé.', 'error', 'alert-login');
             return false;
@@ -34,14 +32,12 @@ const Auth = {
             return false;
         }
 
-        // on garde la photo et tout le reste
         Utils.setCurrentUser(user);
         Utils.showAlert('Connexion réussie !', 'success', 'alert-login');
         return true;
     }
 };
 
-// ===== INITIALISATION PAGE LOGIN =====
 document.addEventListener('DOMContentLoaded', () => {
     StorageManager.init();
 
@@ -52,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleText = document.getElementById('toggle-text');
     const toggleLink = document.getElementById('toggle-link');
 
-    let isLoginMode = false; // inscription affichée par défaut
+    let isLoginMode = false; 
 
     function setMode(showLogin) {
         isLoginMode = showLogin;
@@ -99,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Register
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const name = document.getElementById('register-name').value;
@@ -111,6 +106,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // état initial : inscription
     setMode(false);
 });

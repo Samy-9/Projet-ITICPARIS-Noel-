@@ -1,4 +1,3 @@
-// ===== UTILS =====
 const Utils = {
     showAlert(message, type = 'error', elementId = 'alert-login') {
         const alert = document.getElementById(elementId);
